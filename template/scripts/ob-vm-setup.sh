@@ -64,6 +64,9 @@ EOT'
 sudo systemctl daemon-reload
 sudo systemctl enable openboxes
 
+# Run openboxes service
+sudo service openboxes start
+
 # Create Nginx reverse proxy configuration
 sudo bash -c 'cat <<-EOT > /etc/nginx/sites-available/reverse-proxy.conf
 server {
